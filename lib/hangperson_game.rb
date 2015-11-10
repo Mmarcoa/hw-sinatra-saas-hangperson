@@ -47,7 +47,7 @@ class HangpersonGame
   def check_win_or_lose
     if not self.word_with_guesses.include? '-' and not self.word_with_guesses.empty?
       return :win
-    elsif (@guesses.size + @wrong_guesses.size) < 7
+    elsif @wrong_guesses.size < 7
       return :play
     else
       return :lose      
